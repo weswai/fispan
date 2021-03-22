@@ -10,10 +10,10 @@ function Form () {
     function handleStocks(e){
         e.preventDefault(); 
         if(status === 'buy') {
-            const addCalc = stocks + amount;
+            const addCalc = stocks + Number(amount);
             setStocks(addCalc);
         }else {
-            const minusCalc = stocks - amount;
+            const minusCalc = stocks - Number(amount);
             if(minusCalc > -1) {
                 setStocks(minusCalc);
             }else {
